@@ -1,0 +1,14 @@
+<div class="seat-selection-container">
+    <h2>Select Seats for {{ selectedMovie }}</h2>
+    <div class="seats">
+      <div *ngFor="let seat of seats"
+           (click)="toggleSeat(seat)"
+           [class.selected]="seat.selected"
+           [class.booked]="seat.booked"
+           [class.available]="seat.available">
+        Seat {{ seat.number }}
+      </div>
+    </div>
+    <button (click)="confirmBooking()">Confirm Booking</button>
+  </div>
+  
